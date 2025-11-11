@@ -10,6 +10,8 @@
 @theme {
     --font-sans: "Metropolis", sans-serif;
     --rn-bleu-500: #31a2f0;
+    --rn-bleu-logo: #064473;
+    --rn-rouge-logo: #C00F26;
 }
 
 h1 {
