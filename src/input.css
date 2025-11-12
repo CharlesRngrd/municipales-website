@@ -4,7 +4,7 @@
     font-family: "Metropolis";
     font-style: normal;
     font-weight: 400;
-    src: url("assets/metropolis.black.otf") format("opentype");
+    src: url("assets/font_metropolis.black.otf") format("opentype");
 }
 
 @theme {
@@ -22,4 +22,26 @@ h1 {
     margin: 0;
     text-align: center;
     text-transform: uppercase;
+}
+
+.circle-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-image {
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 3;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
 }
