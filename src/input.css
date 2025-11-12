@@ -41,7 +41,15 @@ h2 {
     text-transform: uppercase;
 }
 
-p {
+h3 {
+    color: var(--rn-bleu-logo);
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+p,
+ul {
     color: var(--gray);
     font-family: var(--font-default);
     font-size: 1.2rem;
