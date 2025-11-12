@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "Metropolis";
+    font-family: "Metropolis Title";
     font-style: normal;
     font-weight: 400;
     src: url("assets/font_metropolis.black.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Metropolis Default";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/font_metropolis.regular.otf") format("opentype");
+}
+
 @theme {
-    --font-sans: "Metropolis", sans-serif;
+    --font-default: "Metropolis Default", sans-serif;
+    --font-title: "Metropolis Title", sans-serif;
+    --gray: #666666;
     --rn-bleu-500: #31a2f0;
     --rn-bleu-logo: #064473;
     --rn-rouge-logo: #C00F26;
@@ -16,7 +25,7 @@
 
 h1 {
     color: var(--rn-bleu-500);
-    font-family: var(--font-sans);
+    font-family: var(--font-title);
     font-size: 7rem;
     line-height: 6rem;
     margin: 0;
@@ -24,24 +33,35 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    color: var(--rn-bleu-logo);
+    font-family: var(--font-title);
+    font-size: 3rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--gray);
+    font-family: var(--font-default);
+    font-size: 1.2rem;
+}
+
 .circle-wrapper {
-    position: relative;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 .circle-image {
     border-radius: 50%;
     object-fit: cover;
     position: relative;
-    z-index: 3;
 }
 
 canvas {
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: 1;
-    pointer-events: none;
 }
