@@ -37,7 +37,7 @@ h2 {
     color: var(--rn-bleu-logo);
     font-family: var(--font-title);
     font-size: 3rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-transform: uppercase;
 }
 
@@ -48,9 +48,12 @@ h3 {
     text-transform: uppercase;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 p,
 ul {
-    color: var(--gray);
     font-family: var(--font-default);
     font-size: 1.2rem;
 }
