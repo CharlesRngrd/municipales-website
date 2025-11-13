@@ -17,9 +17,15 @@
 @theme {
     --font-default: "Metropolis Default", sans-serif;
     --font-title: "Metropolis Title", sans-serif;
+    --rn-gray: #666666;
     --rn-bleu-500: #31a2f0;
     --rn-bleu-logo: #064473;
     --rn-rouge-logo: #C00F26;
+}
+
+::selection {
+    background: var(--rn-gray);
+    color: #fff;
 }
 
 :root {
