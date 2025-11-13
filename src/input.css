@@ -17,45 +17,47 @@
 @theme {
     --font-default: "Metropolis Default", sans-serif;
     --font-title: "Metropolis Title", sans-serif;
-    --gray: #666666;
     --rn-bleu-500: #31a2f0;
     --rn-bleu-logo: #064473;
     --rn-rouge-logo: #C00F26;
 }
 
+:root {
+    font-family: var(--font-default);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+}
+
+h2,
+h3 {
+    color: var(--rn-bleu-logo);
+}
+
+h3,
+p,
+ul {
+    font-size: 1.2rem;
+}
+
 h1 {
     color: var(--rn-bleu-500);
-    font-family: var(--font-title);
     font-size: 7rem;
     line-height: 6rem;
-    margin: 0;
     text-align: center;
-    text-transform: uppercase;
 }
 
 h2 {
-    color: var(--rn-bleu-logo);
-    font-family: var(--font-title);
     font-size: 3rem;
     margin-top: 2rem;
-    text-transform: uppercase;
-}
-
-h3 {
-    color: var(--rn-bleu-logo);
-    font-family: var(--font-title);
-    font-size: 1.2rem;
-    text-transform: uppercase;
 }
 
 a:hover {
     text-decoration: underline;
-}
-
-p,
-ul {
-    font-family: var(--font-default);
-    font-size: 1.2rem;
 }
 
 .circle-wrapper {
