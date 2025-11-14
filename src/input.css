@@ -1,4 +1,8 @@
-@import "tailwindcss";
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
 @font-face {
     font-family: "Metropolis Title";
@@ -23,6 +27,64 @@
     --rn-rouge-logo: #C00F26;
 }
 
+@layer components {
+    :root {
+        @apply text-(--rn-gray)
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply uppercase
+    }
+
+    h1 {
+        @apply text-8xl text-center
+    }
+
+    h2 {
+        @apply text-3xl sm:text-5xl mt-9 sm:mt-18 mb-3 sm:mb-6;
+    }
+
+    h3,
+    p,
+    ul {
+        @apply text-base sm:text-xl text-justify
+    }
+
+    .grid {
+        @apply mx-auto max-w-5xl md:w-12/12 lg:w-10/12 p-6
+    }
+
+    .profile {
+        @apply w-80 mt-9 mx-auto
+    }
+
+    .profile-picture {
+        @apply mx-auto flex items-center justify-center relative
+    }
+
+    .profile-picture-canvas {
+        @apply absolute left-0 top-0
+    }
+
+    .profile-picture-img {
+        @apply rounded-full object-cover relative
+    }
+
+    .profile-text {
+        @apply mt-3 text-center
+    }
+
+    .programme {
+        @apply mt-6 text-justify
+    }
+
+    .programme-element {
+        @apply list-disc ml-20
+    }
+}
+
 ::selection {
     background: var(--rn-gray);
     color: #fff;
@@ -36,7 +98,6 @@ h1,
 h2,
 h3 {
     font-family: var(--font-title);
-    text-transform: uppercase;
 }
 
 h2,
@@ -44,43 +105,10 @@ h3 {
     color: var(--rn-bleu-logo);
 }
 
-h3,
-p,
-ul {
-    font-size: 1.2rem;
-}
-
 h1 {
     color: var(--rn-bleu-500);
-    font-size: 7rem;
-    line-height: 6rem;
-    text-align: center;
-}
-
-h2 {
-    font-size: 3rem;
-    margin-top: 2rem;
 }
 
 a:hover {
     text-decoration: underline;
-}
-
-.circle-wrapper {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.circle-image {
-    border-radius: 50%;
-    object-fit: cover;
-    position: relative;
-}
-
-canvas {
-    left: 0;
-    position: absolute;
-    top: 0;
 }

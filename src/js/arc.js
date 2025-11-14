@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Create all arc-circle instances
-    const circles = Array.from(document.querySelectorAll('.circle-wrapper')).map(el => new ArcCircle(el));
+    const circles = Array.from(document.querySelectorAll('.profile-picture')).map(el => new ArcCircle(el));
 
     function drawAll() {
         const scrollY = window.scrollY;
