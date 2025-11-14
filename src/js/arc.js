@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const imageRadius = 100;
+    var imageRadius = 100;
+
+    if (window.innerWidth <= 640) {
+        imageRadius = 75;
+    };
+
     const padding1 = 5;
     const padding2 = 5;
     const borderWidth1 = 5;
@@ -13,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             this.canvas = wrapper.querySelector('canvas');
             this.ctx = this.canvas.getContext('2d');
             this.img = wrapper.querySelector('img');
-            this.radius = parseInt(wrapper.dataset.radius || 100);
+            this.radius = imageRadius;
 
             // Compute total size
             this.maxRadius = this.radius + padding1 + borderWidth1 + padding2 + borderWidth2;

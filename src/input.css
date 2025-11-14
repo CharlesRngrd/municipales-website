@@ -39,7 +39,7 @@
     }
 
     h1 {
-        @apply text-8xl text-center
+        @apply text-6xl sm:text-8xl text-left sm:text-center
     }
 
     h2 {
@@ -57,11 +57,11 @@
     }
 
     .grid {
-        @apply mx-auto max-w-5xl md:w-12/12 lg:w-10/12 p-6
+        @apply mx-auto max-w-5xl md:w-12/12 lg:w-10/12 p-4
     }
 
     .profile {
-        @apply w-80 mt-9 mx-auto
+        @apply w-80 mt-6 sm:mt-9 mx-auto
     }
 
     .profile-picture {
@@ -77,7 +77,7 @@
     }
 
     .profile-text {
-        @apply mt-3 text-center
+        @apply mt-2 sm:mt-3 text-center
     }
 
     .programme {
