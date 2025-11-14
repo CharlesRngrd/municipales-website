@@ -49,7 +49,11 @@
     h3,
     p,
     ul {
-        @apply text-base sm:text-xl text-justify
+        @apply text-base sm:text-xl
+    }
+
+    p, ul {
+        @apply text-justify
     }
 
     .grid {
@@ -77,11 +81,11 @@
     }
 
     .programme {
-        @apply mt-6 text-justify
+        @apply mt-6
     }
 
     .programme-element {
-        @apply list-disc ml-20
+        @apply list-disc ml-4 sm:ml-20
     }
 }
 
