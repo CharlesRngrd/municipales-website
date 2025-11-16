@@ -22,9 +22,10 @@
     --font-default: "Metropolis Default", sans-serif;
     --font-title: "Metropolis Title", sans-serif;
     --dark-bg: #292929;
-    --dark-text: #C4C4C4;
+    --dark-bg-light: #646464;
+    --dark-text: #C6C6C6;
     --rn-gray: #666666;
-    --rn-bleu-500: #31a2f0;
+    --rn-bleu-500: #31A2F0;
     --rn-bleu-logo: #064473;
     --rn-rouge-logo: #C00F26;
 }
@@ -81,7 +82,7 @@
     }
 
     .profile-picture-img {
-        @apply rounded-full object-cover relative
+        @apply rounded-full object-cover relative dark:bg-(--dark-bg-light)
     }
 
     .profile-text {

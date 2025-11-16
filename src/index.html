@@ -81,7 +81,7 @@
                         class="fill-(--rn-bleu-logo) dark:fill-white"></path>
                     <path
                         d="M308.51,38.44h1.12c1.67,15.45,2.74,31,4.53,46.41,4.18,36.18,11.12,71.82,19,107.34C341,227.54,355.25,261.12,361.22,297v33.86C357.47,354,347.06,374.16,333,392.51c-10.69,13.94-22.54,27-32.75,41.3-11.17,15.69-19.68,32.38-18.33,52.47A102.49,102.49,0,0,0,296.3,532c4.25,7.2,8.88,14.17,13.33,21.25h-3.36c-5-2.14-9.94-4.23-14.89-6.42-28.95-12.83-54.3-30.43-73.78-56a125.35,125.35,0,0,1-25.83-66.76c-2-23.54,3.18-46.05,12.86-67.33s16-43.24,20.76-65.88c5.28-25,9.24-50.15,12.19-75.49.48-4.11,2.21-4.21,5.15-2.57,3.68,2.05,6.33,5.18,8.88,8.45,5.57,7.16,9.39,15.35,13.69,24.68-.7-8.62-1.62-15.86-1.83-23.12a356.54,356.54,0,0,1,2-47.22c3.39-32.63,10.15-64.48,21.65-95.2C292.65,65.63,298.9,51.14,308.51,38.44Z"
-                        style="fill:#fff"></path>
+                        class="fill-white"></path>
                     <path
                         d="M245.27,227.52c4.58,12.18,9.59,24.21,13.65,36.56,8,24.39,12.54,49.4,11.41,75.23-.6,13.79-2.58,27.45-8.35,40-18.56,40.3-14.44,79.65,4.76,118.13,7,14,16,26.92,23.88,39.88-2.84-1.71-6.51-3.79-10-6.08-23.5-15.3-44.62-33.19-60.69-56.43-23-33.24-27.62-68.36-11.48-106a464.24,464.24,0,0,0,32.48-112c1.48-9.53,2.19-19.18,3.25-28.78Z"
                         class="fill-(--rn-bleu-logo)"></path>
@@ -99,7 +99,7 @@
         </div>
     </div>
 
-    <div class="relative z-0 top-0 bg-white dark:bg-(--dark-bg)">
+    <div class="relative z-0 top-0 pb-6 bg-white dark:bg-(--dark-bg)">
         <div class="grid">
             <section class="relative h-[60vh] sm:h-[120vh] md:h-[70vh] lg:h-screen w-full overflow-hidden">
                 <div class="absolute top-5 left-0 w-full h-full z-0" data-parallax data-speed="0.7">
@@ -108,13 +108,22 @@
 
                 <div class="absolute top-70 md:top-85 lg:top-55 left-0 w-full h-full z-5" data-parallax
                     data-speed="0.1">
-                    <img src="assets/background_nuages.png" alt="Nuages" class="w-full" />
+                    <picture>
+                        <!-- Dark mode -->
+                        <source srcset="assets/background_nuages_dark.svg" media="(prefers-color-scheme: dark)" />
+                        <!-- Light mode -->
+                        <img src="assets/background_nuages.svg" alt="Nuages" class="w-full" />
+                    </picture>
                 </div>
 
                 <div class="absolute top-55 sm:top-25 md:top-60 lg:top-20 left-0 w-full h-full z-10" data-parallax
                     data-speed="0.6">
-                    <img class="block dark:hidden w-full" src="assets/background_mairie.png" alt="Mairie" />
-                    <img class="dark:block hidden w-full" src="assets/background_mairie_dark.png" alt="Mairie Dark" />
+                    <picture>
+                        <!-- Dark mode -->
+                        <source srcset="assets/background_mairie_dark.png" media="(prefers-color-scheme: dark)" />
+                        <!-- Light mode -->
+                        <img src="assets/background_mairie.png" alt="Nuages" class="w-full" />
+                    </picture>
                     <div class="bg-white dark:bg-(--dark-bg) h-full"></div>
                 </div>
             </section>
@@ -288,7 +297,7 @@
         </div>
     </div>
 
-    <div class="relative z-0 text-white bg-(--rn-rouge-logo) mt-6 pt-3 sm:pt-6 pb-6 sm:pb-12">
+    <div class="relative z-0 text-white dark:text-(--dark-text) bg-(--rn-rouge-logo) pt-3 sm:pt-6 pb-6 sm:pb-12">
         <div class="grid">
             <p>Mentions légales</p>
         </div>
