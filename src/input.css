@@ -21,6 +21,8 @@
 @theme {
     --font-default: "Metropolis Default", sans-serif;
     --font-title: "Metropolis Title", sans-serif;
+    --dark-bg: #292929;
+    --dark-text: #C4C4C4;
     --rn-gray: #666666;
     --rn-bleu-500: #31a2f0;
     --rn-bleu-logo: #064473;
@@ -29,7 +31,7 @@
 
 @layer components {
     :root {
-        @apply text-(--rn-gray)
+        @apply text-(--rn-gray) dark:text-(--dark-text)
     }
 
     h1,
@@ -38,12 +40,18 @@
         @apply uppercase
     }
 
+    h2,
+    h3 {
+        @apply text-(--rn-bleu-logo) dark:text-(--dark-text)
+    }
+
+
     h1 {
         @apply text-6xl sm:text-8xl text-left sm:text-center
     }
 
     h2 {
-        @apply text-3xl sm:text-5xl mt-9 sm:mt-18 mb-3 sm:mb-6;
+        @apply text-3xl sm:text-5xl mt-9 sm:mt-18 mb-3 sm:mb-6
     }
 
     h3,
@@ -102,11 +110,6 @@ h1,
 h2,
 h3 {
     font-family: var(--font-title);
-}
-
-h2,
-h3 {
-    color: var(--rn-bleu-logo);
 }
 
 h1 {
