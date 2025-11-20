@@ -65,6 +65,18 @@
         @apply text-justify
     }
 
+    .button-container {
+        @apply shadow flex items-center ml-auto w-36 lg:w-42 hover:w-45 p-2 lg:p-4 rounded-tl-full rounded-bl-full
+    }
+
+    .button-emoji {
+        @apply text-3xl pl-2
+    }
+
+    .button-text {
+        @apply underline pl-3
+    }
+
     .grid {
         @apply mx-auto max-w-5xl sm:w-12/12 md:w-10/12 lg:w-8/12 p-4
     }
