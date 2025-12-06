@@ -20,14 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
             this.img = wrapper.querySelector('img');
             this.radius = imageRadius;
 
+            // High DPI scaling
+            this.dpr = window.devicePixelRatio || 1;
+
             // Compute total size
             this.maxRadius = this.radius + padding1 + borderWidth1 + padding2 + borderWidth2;
             this.size = this.maxRadius * 2 + 2;
             this.center = this.size / 2;
 
+            // Proper HiDPI canvas resolution
+            this.canvas.width = this.size * this.dpr;
+            this.canvas.height = this.size * this.dpr;
+            this.canvas.style.width = this.size + 'px';
+            this.canvas.style.height = this.size + 'px';
+
+            this.ctx.scale(this.dpr, this.dpr);
+
+
             // Resize DOM elements
-            this.canvas.width = this.size;
-            this.canvas.height = this.size;
             this.wrapper.style.width = this.size + 'px';
             this.wrapper.style.height = this.size + 'px';
             this.img.style.width = this.radius * 2 + 'px';
@@ -40,7 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         draw(scrollY) {
             const ctx = this.ctx;
-            ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+            // Clear using CSS pixel dimensions
+            ctx.clearRect(0, 0, this.size, this.size);
 
             const rot1 = this.baseAngle1 + scrollY * 0.005;
             const rot2 = this.baseAngle2 - scrollY * 0.005;
